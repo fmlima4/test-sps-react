@@ -4,7 +4,14 @@ import axios from 'axios';
 import { AuthProvider, useAuth } from '../contexts/AuthContext';
 
 // Mock do axios
-jest.mock('axios');
+jest.mock('axios', () => ({
+  post: jest.fn(),
+  defaults: {
+    headers: {
+      common: {}
+    }
+  }
+}));
 
 // Mock do localStorage
 const localStorageMock = {

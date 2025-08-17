@@ -1,7 +1,13 @@
 import axios from 'axios';
 import UserService from '../services/UserService';
 
-jest.mock('axios');
+// Mock do axios
+jest.mock('axios', () => ({
+  get: jest.fn(),
+  post: jest.fn(),
+  put: jest.fn(),
+  delete: jest.fn()
+}));
 
 describe('UserService', () => {
   let userService;

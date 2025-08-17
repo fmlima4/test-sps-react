@@ -64,12 +64,12 @@ function Home() {
 
         <footer className="home-footer">
           <div className="footer-content">
-            <p>&copy; 2024 SPS React Test - Sistema de Teste</p>
+            <p>&copy; hope you enjoy</p>
             <div className="footer-links">
-              <a href="#" onClick={(e) => e.preventDefault()}>
-                Documentação
+              <a href="http://localhost:3000/api-docs/" target="_blank" rel="noopener noreferrer">
+                Suporte
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()}>
+              <a href="https://felipemiranda.dev.br" target="_blank" rel="noopener noreferrer">
                 Suporte
               </a>
             </div>
