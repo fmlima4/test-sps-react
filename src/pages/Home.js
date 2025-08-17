@@ -66,7 +66,7 @@ function Home() {
           <div className="footer-content">
             <p>&copy; hope you enjoy</p>
             <div className="footer-links">
-              <a href="http://localhost:3000/api-docs/" target="_blank" rel="noopener noreferrer">
+              <a href="https://test-sps-server.onrender.com/api-docs/" target="_blank" rel="noopener noreferrer">
                 Suporte
               </a>
               <a href="https://felipemiranda.dev.br" target="_blank" rel="noopener noreferrer">

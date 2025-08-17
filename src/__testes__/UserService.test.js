@@ -265,6 +265,7 @@ describe('UserService', () => {
       const validData = {
         name: 'João Silva',
         email: 'joao@test.com',
+        password: '123123'
       };
 
       const result = userService.validateUserData(validData);
@@ -292,7 +293,7 @@ describe('UserService', () => {
     });
 
     test('deve detectar email obrigatório', () => {
-      const invalidData = { name: 'João Silva' };
+      const invalidData = { name: 'João Silva', password: '123123' };
 
       const result = userService.validateUserData(invalidData);
 
@@ -301,7 +302,7 @@ describe('UserService', () => {
     });
 
     test('deve detectar email inválido', () => {
-      const invalidData = { name: 'João Silva', email: 'email-inválido' };
+      const invalidData = { name: 'João Silva', email: 'email-inválido', password: '123123' };
 
       const result = userService.validateUserData(invalidData);
 
@@ -313,6 +314,7 @@ describe('UserService', () => {
       const invalidData = {
         name: '',
         email: 'email-inválido',
+        password: 'Senha é obrigatório'
       };
 
       const result = userService.validateUserData(invalidData);

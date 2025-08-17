@@ -132,6 +132,12 @@ class UserService {
       errors.email = 'Email inválido';
     }
 
+    if (!userData.password?.trim()) {
+      errors.password = 'Senha é obrigatório';
+    } else if (userData.password.length < 4) {
+      errors.password = 'Senha deve ter pelo menos 4 caracteres';
+    }
+
     return {
       isValid: Object.keys(errors).length === 0,
       errors
