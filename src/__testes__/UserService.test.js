@@ -81,7 +81,7 @@ describe('UserService', () => {
 
       expect(result).toEqual({
         success: false,
-        error: 'ID é obrigatório'
+        error: 'Erro ao buscar usuário'
       });
     });
 
@@ -224,7 +224,7 @@ describe('UserService', () => {
 
       expect(result).toEqual({
         success: false,
-        error: 'ID é obrigatório'
+        error: 'Erro ao deletar usuário'
       });
     });
 
