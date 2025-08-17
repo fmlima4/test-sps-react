@@ -32,10 +32,10 @@ const UserForm = () => {
     const result = await userService.get(userId);
     
     if (result.success) {
+      const u = result.data.user;
       setFormData({
-        name: result.data.name || '',
-        email: result.data.email || '',
-        password: result.data.password || '',
+        name: u.name || '',
+        email: u.email || '',
       });
     } else {
       setSubmitError(result.error);

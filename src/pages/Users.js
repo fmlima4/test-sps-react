@@ -26,11 +26,11 @@ const Users = () => {
     const result = await userService.list();
     
     if (result.success) {
-      setUsers(result.data);
+      setUsers(result.data.users || []); // garante que users seja sempre array
     } else {
       setError(result.error);
     }
-    
+      
     setLoading(false);
   };
 
@@ -130,9 +130,6 @@ const Users = () => {
                   <tr key={user.id} className="user-row">
                     <td className="user-id">#{user.id}</td>
                     <td className="user-name">
-                      <div className="user-avatar">
-                        {user.name.charAt(0).toUpperCase()}
-                      </div>
                       <span>{user.name}</span>
                     </td>
                     <td className="user-email">{user.email}</td>

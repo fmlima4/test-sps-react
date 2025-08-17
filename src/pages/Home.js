@@ -43,12 +43,6 @@ function Home() {
             </div>
           ) : (
             <div className="dashboard-section">
-              <div className="welcome-card">
-                <div className="welcome-icon">👋</div>
-                <h2>Dashboard</h2>
-                <p>Gerencie os usuários do sistema de forma simples e eficiente.</p>
-              </div>
-
               <div className="features-grid">
                 <Link to="/users" className="feature-card">
                   <div className="feature-icon">👥</div>
